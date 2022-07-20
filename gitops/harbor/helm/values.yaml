@@ -6,10 +6,15 @@ updateStrategy:
   type: Recreate
 
 ingress:
+  enabled: true
   core:
     hostname: harbor.homelab.platformfeverdream.io
+    selfSigned: true
+    tls: true
   notary:
     hostname: notary.harbor.homelab.platformfeverdream.io
+    selfSigned: true
+    tls: true
 
 persistence:
   persistentVolumeClaim:
