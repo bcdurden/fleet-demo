@@ -1,20 +1,15 @@
 externalURL: https://harbor.homelab.platformfeverdream.io
 
-harborAdminPassword: "example-password"
+harborAdminPassword: "Harbor12345"
 
 updateStrategy:
   type: Recreate
 
-ingress:
-  enabled: true
-  core:
-    hostname: harbor.homelab.platformfeverdream.io
-    selfSigned: true
-    tls: true
-  notary:
-    hostname: notary.harbor.homelab.platformfeverdream.io
-    selfSigned: true
-    tls: true
+expose:
+  ingress:
+    hosts:
+      core: harbor.homelab.platformfeverdream.io
+      notary: notary.harbor.homelab.platformfeverdream.io
 
 persistence:
   persistentVolumeClaim:
