@@ -4,7 +4,7 @@ metadata:
   name: harbor
   namespace: fleet-default
 spec:
-  repo: ssh://git@github.com:bcdurden/fleet-demo.git
+  repo: https://github.com/bcdurden/fleet-demo.git
 
   # To target specific clusters, uncomment this block
   # targets:
@@ -14,4 +14,4 @@ spec:
   #       cluster: example
 
   paths:
-  - ".gitops//harbor/helm"
+  - "./gitops/harbor/helm"
