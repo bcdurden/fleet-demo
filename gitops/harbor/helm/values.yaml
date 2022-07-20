@@ -5,6 +5,12 @@ harborAdminPassword: "example-password"
 updateStrategy:
   type: Recreate
 
+ingress:
+  core:
+    hostname: harbor.homelab.platformfeverdream.io
+  notary:
+    hostname: notary.harbor.homelab.platformfeverdream.io
+
 persistence:
   persistentVolumeClaim:
     registry:
