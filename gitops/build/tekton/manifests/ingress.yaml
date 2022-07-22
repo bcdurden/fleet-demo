@@ -4,7 +4,7 @@ metadata:
   name: tekton-dashboard
   namespace: tekton-pipelines
   annotations: 
-    cert-manager.io/issuer: tekton-pipelines
+    cert-manager.io/issuer: tektoncd-ca-issuer
     cert-manager.io/issuer-kind: Issuer
 spec:
   rules:

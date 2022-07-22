@@ -17,12 +17,9 @@ spec:
   duration: 87600h
   renewBefore: 360h
   organization:
-  - Project tektoncd
+  - Tekton
   commonName: tektoncd CA
   isCA: true
-  keySize: 2048
-  keyAlgorithm: rsa
-  keyEncoding: pkcs1
   usages:
   - server auth
   - client auth
