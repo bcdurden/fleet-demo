@@ -1,3 +1,14 @@
 global:
   domain: demo.homelab.platformfeverdream.io
   useCustomTlsIssuer: false
+api:
+  # Default users
+  users:
+    - username: admin
+      passwordBcrypt: "$2a$04$9wk1vA1DgdF/dodnTZZhx.gDuTUgVNa0.NXl936ecxKZw4BXtjxVi"
+      role: admin
+    - username: epinio
+      passwordBcrypt: "$2a$10$6bCi5NMstMK781In7JGiL.B44pgoplUb330FQvm6mVXMppbXBPiXS"
+      role: user
+      workspaces:
+        - workspace
