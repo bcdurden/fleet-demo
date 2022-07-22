@@ -1,0 +1,44 @@
+---
+apiVersion: cert-manager.io/v1alpha2
+kind: Issuer
+metadata:
+  name: tektoncd-self-signed-ca-issuer
+  namespace: tekton-pipelines
+spec:
+  selfSigned: {}
+---
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: tektoncd-ca
+  namespace: tekton-pipelines
+spec:
+  secretName: tektoncd-ca-key-pair
+  duration: 87600h
+  renewBefore: 360h
+  organization:
+  - Project tektoncd
+  commonName: tektoncd CA
+  isCA: true
+  keySize: 2048
+  keyAlgorithm: rsa
+  keyEncoding: pkcs1
+  usages:
+  - server auth
+  - client auth
+  dnsNames:
+  - tektoncdca
+  ipAddresses: []
+  issuerRef:
+    name: tektoncd-self-signed-ca-issuer
+    kind: Issuer
+    group: cert-manager.io
+---
+apiVersion: cert-manager.io/v1alpha2
+kind: Issuer
+metadata:
+  name: tektoncd-ca-issuer
+  namespace: tekton-pipelines
+spec:
+  ca:
+    secretName: tektoncd-ca-key-pair
