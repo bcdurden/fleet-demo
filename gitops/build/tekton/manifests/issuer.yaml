@@ -16,8 +16,6 @@ spec:
   secretName: tektoncd-ca-key-pair
   duration: 87600h
   renewBefore: 360h
-  organization:
-  - Tekton
   commonName: tektoncd CA
   isCA: true
   usages:
