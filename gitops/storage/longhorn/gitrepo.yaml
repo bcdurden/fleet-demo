@@ -5,6 +5,7 @@ metadata:
   namespace: fleet-default
 spec:
   repo: https://github.com/bcdurden/fleet-demo.git
+  branch: main
 
   # To target specific clusters, uncomment this block
   # targets:
@@ -12,6 +13,13 @@ spec:
   #   clusterSelector:
   #     matchLabels:
   #       cluster: example
+  targets:
+  - clusterSelector:
+      matchExpressions:
+      - key: provider.cattle.io
+        operator: NotIn
+        values:
+        - harvester
 
   paths:
   - "./gitops/storage/longhorn/helm"
