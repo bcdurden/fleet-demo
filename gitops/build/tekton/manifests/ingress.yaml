@@ -9,7 +9,7 @@ metadata:
 spec:
   rules:
   - host: tekton.homelab.platformfeverdream.io
-    https:
+    http:
       paths:
       - pathType: ImplementationSpecific
         backend:
@@ -17,3 +17,7 @@ spec:
             name: tekton-dashboard
             port:
               number: 9097
+  tls:
+  - hosts:
+    - tekton.homelab.platformfeverdream.io
+    secretName: tls-tekton-ingress
