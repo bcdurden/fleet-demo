@@ -1,0 +1,13 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: kapp-controller
+  namespace: fleet-default
+spec:
+  repo: https://github.com/bcdurden/fleet-demo.git
+  branch: main
+  targets:
+  - clusterName: demo
+    
+  paths:
+  - "./gitops/build/kapp-controller/manifest"
