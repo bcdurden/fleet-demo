@@ -10,4 +10,5 @@ spec:
   - clusterName: demo
     
   paths:
-  - "./gitops/build/tekton/manifests"
+  - "./gitops/build/tekton/manifests/pipelines"
+  - "./gitops/build/tekton/manifests/dashboard"
