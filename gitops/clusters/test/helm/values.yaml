@@ -11,7 +11,7 @@ rke:
   localClusterAuthEndpoint:
     enabled: false
 nodepools:
-- name: control-plane
+- name: harvester-nodepool-1
   etcd: true
   controlplane: true
   worker: true
@@ -29,7 +29,8 @@ nodepools:
   cpuCount: 2
   memorySize: 4
   networkName: default/workloads
-  imageName: default/ubuntu-20.04-server-cloudimg-amd64.img
+  networkType: dhcp
+  imageName: default/image-tc258
   vmNamespace: default
   sshUser: ubuntu
 
