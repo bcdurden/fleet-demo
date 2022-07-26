@@ -1,4 +1,4 @@
-cloudCredentialSecretName: default/harvester2
+cloudCredentialSecretName: cattle-global-data:cc-wqgrc
 cloudprovider: harvester
 cluster:
   annotations: {}
