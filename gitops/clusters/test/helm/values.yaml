@@ -1,0 +1,35 @@
+cloudCredentialSecretName: harvester2
+cloudprovider: harvester
+cluster:
+  annotations: {}
+  labels: {}
+  name: template-rke2-small-dev
+kubernetesVersion: v1.23.7+rke2r2
+monitoring:
+  enabled: false
+rke:
+  localClusterAuthEndpoint:
+    enabled: false
+nodepools:
+- name: control-plane
+  etcd: true
+  controlplane: true
+  worker: true
+
+  # specify node labels
+  labels: {}
+
+  # specify node taints
+  taints: {}
+
+  # specify nodepool size
+  quantity: 1
+  diskSize: 40
+  diskBus: virtio
+  cpuCount: 2
+  memorySize: 4
+  networkName: default/workloads
+  imageName: default/ubuntu-20.04-server-cloudimg-amd64.img
+  vmNamespace: default
+  sshUser: ubuntu
+
