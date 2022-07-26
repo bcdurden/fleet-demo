@@ -3,7 +3,7 @@ cloudprovider: harvester
 cluster:
   annotations: {}
   labels: {}
-  name: rke2-small-dev
+  name: rke2-small-dev-alpha
 kubernetesVersion: v1.23.7+rke2r2
 monitoring:
   enabled: false
@@ -11,7 +11,7 @@ rke:
   localClusterAuthEndpoint:
     enabled: false
 nodepools:
-- name: dev-control-plane
+- name: dev-control-plane-alpha
   displayName: control-plane
   etcd: true
   controlplane: true
@@ -34,7 +34,7 @@ nodepools:
   imageName: default/image-tc258
   vmNamespace: default
   sshUser: ubuntu
-- name: dev-worker
+- name: dev-worker-alpha
   displayName: worker
   worker: true
 
