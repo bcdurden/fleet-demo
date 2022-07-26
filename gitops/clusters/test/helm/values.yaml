@@ -1,4 +1,4 @@
-cloudCredentialSecretName: harvester2
+cloudCredentialSecretName: default/harvester2
 cloudprovider: harvester
 cluster:
   annotations: {}
