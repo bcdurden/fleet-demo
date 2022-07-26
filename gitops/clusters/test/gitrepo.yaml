@@ -2,7 +2,7 @@ kind: GitRepo
 apiVersion: fleet.cattle.io/v1alpha1
 metadata:
   name: cluster-templates
-  namespace: fleet-default
+  namespace: fleet-local
 spec:
   repo: https://github.com/bcdurden/fleet-demo.git
   branch: main  
