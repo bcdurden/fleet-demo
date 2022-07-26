@@ -10,4 +10,4 @@ spec:
   - clusterName: local
 
   paths:
-  - "./gitops/clusters/test"
+  - "./gitops/clusters/test/helm"

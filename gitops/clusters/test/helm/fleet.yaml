@@ -1,6 +1,3 @@
 defaultNamespace: default
 helm:
-  repo: https://github.com/rancher/cluster-template-examples.git
-  chart: cluster-template
-  version: 0.0.1
-  releaseName: cluster-template
+  chart: https://raw.githubusercontent.com/rancher/cluster-template-examples/main
